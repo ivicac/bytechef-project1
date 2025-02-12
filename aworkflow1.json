@@ -1,0 +1,62 @@
+{
+    "label" : "aworkflow1",
+    "description" : "",
+    "inputs" : [ {
+        "name" : "ee",
+        "label" : "ee",
+        "type" : "string"
+    } ],
+    "triggers" : [ ],
+    "tasks" : [ {
+        "description" : "1Accelo is a cloud-based platform designed to streamline operations for service businesses by integrating project management, CRM, and billing functionalities into one unified system.",
+        "label" : "Accelo",
+        "name" : "accelo_1",
+        "type" : "accelo/v1/createContact",
+        "parameters" : { }
+    }, {
+        "description" : "Loops sequentially over list of items.",
+        "label" : "Loop",
+        "name" : "loop_1",
+        "parameters" : {
+            "loopForever" : false,
+            "iteratee" : [ {
+                "label" : "ActiveCampaign",
+                "name" : "active-campaign_1",
+                "parameters" : {
+                    "__item" : {
+                        "account" : { }
+                    }
+                },
+                "type" : "active-campaign/v1/createAccount",
+                "metadata" : {
+                    "ui" : {
+                        "dynamicPropertyTypes" : { }
+                    }
+                }
+            } ]
+        },
+        "type" : "loop/v1"
+    }, {
+        "description" : "Directs a stream based on true/false results of comparisons.",
+        "label" : "Condition",
+        "name" : "condition_1",
+        "parameters" : {
+            "rawExpression" : false,
+            "caseFalse" : [ {
+                "label" : "Accelo",
+                "name" : "accelo_2",
+                "parameters" : {
+                    "__item" : { }
+                },
+                "type" : "accelo/v1/createCompany",
+                "metadata" : {
+                    "ui" : {
+                        "dynamicPropertyTypes" : { }
+                    }
+                }
+            } ],
+            "caseTrue" : [ ]
+        },
+        "type" : "condition/v1"
+    } ]
+}
