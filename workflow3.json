@@ -1,0 +1,14 @@
+{
+    "label": "workflow3",
+    "description": "",
+    "inputs": [],
+    "triggers": [],
+    "tasks": [
+        {
+            "label": "Affinity",
+            "name": "affinity_1",
+            "parameters": {},
+            "type": "affinity/v1/createOrganization"
+        }
+    ]
+}
