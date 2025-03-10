@@ -1,0 +1,14 @@
+{
+    "label": "workflow2.json",
+    "description": "",
+    "inputs": [],
+    "triggers": [],
+    "tasks": [
+        {
+            "label": "Acumbamail",
+            "name": "acumbamail_1",
+            "parameters": {},
+            "type": "acumbamail/v1/deleteSubscriberList"
+        }
+    ]
+}
