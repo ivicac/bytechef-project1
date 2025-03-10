@@ -9,6 +9,12 @@
             "name": "affinity_1",
             "parameters": {},
             "type": "affinity/v1/createOrganization"
+        },
+        {
+            "label": "Accelo",
+            "name": "accelo_1",
+            "parameters": {},
+            "type": "accelo/v1/createCompany"
         }
     ]
 }
