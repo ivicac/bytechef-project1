@@ -5,7 +5,7 @@
     "triggers": [],
     "tasks": [
         {
-            "label": "Affinity",
+            "label": "Affinity2",
             "name": "affinity_1",
             "parameters": {},
             "type": "affinity/v1/createOrganization"
